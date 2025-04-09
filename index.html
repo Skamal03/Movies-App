@@ -17,24 +17,55 @@
     
         <div class="side-menu" id="sideMenu">
             <ul>
-                <li><a href="#">Genres</a></li>
-                <li><a href="#">Trending</a></li>
-                <li><a href="#">Top Rated</a></li>
-                <li><a href="#">Now Playing</a></li>
+                <li><a href="#">← Back</a></li>
+        
+                <li>
+                    <button class="menu-btn" onclick="toggleSubMenu('genresSub')">Genres ▾</button>
+                    <ul class="submenu" id="genresSub">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">Horror</a></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <button class="menu-btn" onclick="toggleSubMenu('trendingSub')">Trending ▾</button>
+                    <ul class="submenu" id="trendingSub">
+                        <li><a href="#">Today</a></li>
+                        <li><a href="#">This Week</a></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <button class="menu-btn" onclick="toggleSubMenu('topRatedSub')">Top Rated ▾</button>
+                    <ul class="submenu" id="topRatedSub">
+                        <li><a href="#">All Time</a></li>
+                        <li><a href="#">This Year</a></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <button class="menu-btn" onclick="toggleSubMenu('nowPlayingSub')">Now Playing ▾</button>
+                    <ul class="submenu" id="nowPlayingSub">
+                        <li><a href="#">In Theaters</a></li>
+                        <li><a href="#">Streaming</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
+        
     </header>
-    
+
 
     <section class="banner">
         <div class="banner-content">
-            <h1>Discover Your Next Favorite Movie</h1>
+            <h1>Discover Your Favorite Movies</h1>
             <p>Explore the world of movies and TV shows.</p>
         </div>
     </section>
 
     <section class="movie-list">
-        <h2>Trending Movies</h2>
+        <h2>Trending Now</h2>
         <div class="movies">
             <div class="movie-card">
                 <img src="movie1.jpg" alt="Movie 1">

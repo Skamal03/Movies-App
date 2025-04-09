@@ -1,4 +1,4 @@
-const apiKey = 'heheheheh';
+const apiKey = 'heheheh';
 const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
 
 const movieContainer = document.querySelector('.movies');
@@ -39,12 +39,7 @@ browseBtn.addEventListener('click', () => {
 });
 
 
-  function toggleMenu(event) {
-    if (event) event.preventDefault();
-    document.getElementById('sideMenu').classList.toggle('active');
-  }
-
-  function toggleSubMenu(id) {
-    const submenu = document.getElementById(id);
-    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-  }
+function toggleSubMenu(id) {
+  const submenu = document.getElementById(id);
+  submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}

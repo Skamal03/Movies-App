@@ -37,3 +37,14 @@ const sideMenu = document.getElementById('sideMenu');
 browseBtn.addEventListener('click', () => {
     sideMenu.classList.toggle('open');
 });
+
+
+  function toggleMenu(event) {
+    if (event) event.preventDefault();
+    document.getElementById('sideMenu').classList.toggle('active');
+  }
+
+  function toggleSubMenu(id) {
+    const submenu = document.getElementById(id);
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+  }

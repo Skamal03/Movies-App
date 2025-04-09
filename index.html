@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">MovieApp</div>
-        <nav>
+
+        <form class="search-bar">
+            <input type="text" placeholder="Search movies...">
+            <button type="submit">Search</button>
+        </form>
+    
+        <button class="browse-btn" id="browseBtn">Browse</button>
+    
+        <div class="side-menu" id="sideMenu">
             <ul>
-                <li><a href="#">Home</a></li>
                 <li><a href="#">Genres</a></li>
+                <li><a href="#">Trending</a></li>
                 <li><a href="#">Top Rated</a></li>
                 <li><a href="#">Now Playing</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
+    
 
     <section class="banner">
         <div class="banner-content">
             <h1>Discover Your Next Favorite Movie</h1>
             <p>Explore the world of movies and TV shows.</p>
-            <button>Browse Movies</button>
         </div>
     </section>
 
@@ -48,12 +54,9 @@
             </div>
         </div>
     </section>
+
     <script src="script.js"></script>
-    <section class="movie-list">
-        <div class="movies">
-          <!-- Movies will be inserted here -->
-        </div>
-      </section>
+
       
     <footer>
         <p>&copy; 2025 MovieApp, All Rights Reserved</p>

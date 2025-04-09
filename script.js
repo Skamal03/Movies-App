@@ -26,3 +26,14 @@ fetch(apiUrl)
     console.error('Error fetching movies:', error);
     movieContainer.innerHTML = '<p>Failed to load movies.</p>';
   });
+
+
+
+// side Menue
+
+const browseBtn = document.getElementById('browseBtn');
+const sideMenu = document.getElementById('sideMenu');
+
+browseBtn.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+});

@@ -10,37 +10,93 @@ body {
   color: white;
 }
 
+/* Basic header styles */
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   background-color: #111;
 }
 
-header .logo {
+.logo {
   font-size: 24px;
-  font-weight: bold;
+  color: white;
 }
 
-header nav ul {
+.browse-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.browse-btn:hover {
+  background-color: #e5533d;
+}
+
+/* Side menu styles (hidden by default) */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Off-screen initially */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+}
+
+.side-menu ul {
   list-style-type: none;
-  display: flex;
-  gap: 20px;
+  padding: 0;
 }
 
-header nav ul li {
-  display: inline;
+.side-menu ul li {
+  padding: 15px;
+  text-align: center;
 }
 
-header nav ul li a {
+.side-menu ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
 }
 
-header nav ul li a:hover {
-  text-decoration: underline;
+.side-menu ul li a:hover {
+  background-color: #555;
 }
+
+/* Show the menu when active */
+.side-menu.open {
+  left: 0;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #e5533d;
+}
+
 
 .banner {
   background: url('banner-image.jpg') no-repeat center center/cover;
@@ -58,18 +114,6 @@ header nav ul li a:hover {
   margin-bottom: 30px;
 }
 
-.banner-content button {
-  padding: 10px 20px;
-  background-color: #ff6347;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.banner-content button:hover {
-  background-color: #e5533d;
-}
 
 .movie-list {
   padding: 50px 20px;

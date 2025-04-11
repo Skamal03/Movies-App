@@ -24,14 +24,55 @@ header {
   color: white;
 }
 
-.browse-btn {
+.login-btn{
+  width: 110px;
   background-color: #ff6347;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
+.login-btn:hover {
+  background-color: #e5533d;
+}
+
+.watchlist-btn{
+  width: 110px;
+  background-color: #111;
+  color: white;
+  border: 2px solid #ff6347;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.watchlist-btn:hover {
+  background-color: #e5533d;
+}
+
+.favourites-btn{
+  width: 110px;
+  background-color: #111;
+  color: white;
+  border: 2px solid #ff6347;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.favourites-btn:hover {
+  background-color: #e5533d;
+}
+
+.browse-btn {
+  width: 110px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
 .browse-btn:hover {
   background-color: #e5533d;
 }
@@ -96,32 +137,7 @@ header {
 }
 
 .side-menu ul li {
-  margin-bottom: 10px;
-}
-
-
-.search-bar {
-  display: flex;
-  gap: 10px;
-}
-
-.search-bar input {
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-}
-
-.search-bar button {
-  padding: 8px 12px;
-  background-color: #ff6347;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.search-bar button:hover {
-  background-color: #e5533d;
+  margin-bottom: 2px;
 }
 
 
@@ -141,6 +157,34 @@ header {
   margin-bottom: 30px;
 }
 
+.search-bar {
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.search-bar input {
+  align-items: center;
+  width: 450px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  align-items: center;
+  width: 100px;
+  padding: 8px 12px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #e5533d;
+}
 
 .movie-list {
   padding: 50px 20px;
@@ -161,7 +205,7 @@ header {
 
 .movie-card {
   width: 200px;
-  background-color: #333;
+  background-color: #292626;
   border-radius: 10px;
   overflow: hidden;
   text-align: center;

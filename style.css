@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -10,83 +10,67 @@ body {
   color: white;
 }
 
-/* Basic header styles */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #111;
+  position: relative;
+  z-index: 999;
+  height: 90px;
+  background-color: #1b1b1b;
 }
 
-.logo {
-  font-size: 24px;
-  color: white;
+.login-btn,
+.watchlist-btn,
+.favourites-btn,
+.browse-btn {
+  width: 120px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.login-btn{
-  width: 110px;
+.login-btn {
   background-color: #ff6347;
   color: white;
   border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
-.login-btn:hover {
-  background-color: #e5533d;
+
+.browse-btn { 
+  background-color: #ff6347;
+  color: white;
+  border: 1px solid #ff6347;
 }
 
-.watchlist-btn{
-  width: 110px;
+.favourites-btn,
+.watchlist-btn {
   background-color: #111;
   color: white;
-  border: 2px solid #ff6347;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
+  border: 2px solid #ce2609;
 }
+
+.login-btn:hover,
+.browse-btn:hover,
+.favourites-btn:hover,
 .watchlist-btn:hover {
   background-color: #e5533d;
 }
 
-.favourites-btn{
-  width: 110px;
-  background-color: #111;
-  color: white;
-  border: 2px solid #ff6347;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.favourites-btn:hover {
-  background-color: #e5533d;
-}
 
-.browse-btn {
-  width: 110px;
-  background-color: #ff6347;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.browse-btn:hover {
-  background-color: #e5533d;
-}
 
-/* Side menu styles (hidden by default) */
+/* Side menu */
 .side-menu {
   position: fixed;
   top: 0;
-  left: -250px; /* Off-screen initially */
+  left: -250px;
   width: 250px;
   height: 100%;
   background-color: #333;
   transition: left 0.3s ease;
   padding-top: 60px;
+  z-index: 2;
+}
+
+.side-menu.open {
+  left: 0;
 }
 
 .side-menu ul {
@@ -97,6 +81,7 @@ header {
 .side-menu ul li {
   padding: 15px;
   text-align: center;
+  margin-bottom: 2px;
 }
 
 .side-menu ul li a {
@@ -107,11 +92,6 @@ header {
 
 .side-menu ul li a:hover {
   background-color: #555;
-}
-
-/* Show the menu when active */
-.side-menu.open {
-  left: 0;
 }
 
 .menu-btn {
@@ -136,15 +116,34 @@ header {
   color: #ddd;
 }
 
-.side-menu ul li {
-  margin-bottom: 2px;
+/* Banner with background image and blur */
+.banner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2), #222),
+    url('movie_poster_1.jpg') no-repeat center center / cover;
+  filter: blur(6px);
+  z-index: 0;
+}
 
-.banner {
-  background: url('banner-image.jpg') no-repeat center center/cover;
-  padding: 100px 20px;
-  text-align: center;
+.banner-content {
+  position: relative;
+  z-index: 1;
 }
 
 .banner-content h1 {
@@ -157,23 +156,14 @@ header {
   margin-bottom: 30px;
 }
 
-.search-bar {
-  align-items: center;
-  padding: 10px;
-  gap: 10px;
-}
-
 .search-bar input {
-  align-items: center;
-  width: 450px;
+  width: 100%;
   padding: 8px;
   border: none;
   border-radius: 5px;
 }
 
 .search-bar button {
-  align-items: center;
-  width: 100px;
   padding: 8px 12px;
   background-color: #ff6347;
   color: white;
@@ -182,25 +172,14 @@ header {
   cursor: pointer;
 }
 
-.search-bar button:hover {
-  background-color: #e5533d;
-}
-
+/* Movie list and cards */
 .movie-list {
   padding: 50px 20px;
-  text-align: center;
 }
 
 .movie-list h2 {
   font-size: 30px;
   margin-bottom: 40px;
-}
-
-.movies {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
 }
 
 .movie-card {
@@ -213,7 +192,6 @@ header {
 
 .movie-card img {
   width: 100%;
-  height: auto;
   border-bottom: 2px solid #444;
 }
 

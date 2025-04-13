@@ -8,21 +8,27 @@
 </head>
 
 <body>
-    <header class="position-relative d-flex justify-content-between align-items-center p-3">
+  <header class="d-flex justify-content-between align-items-center p-3 flex-wrap position-relative">
 
-        <div class="d-flex align-items-center gap-2">
-            <button class="browse-btn" id="browseBtn">Browse</button>
-          </div>
-        
-          <div class="text-white fs-1 text-center position-absolute top-50 start-50 translate-middle flex-grow-1">
-            Movies App
-          </div>
+    <div class="d-flex align-items-center gap-3">
+      <button class="browse-btn btn" id="browseBtn">
+        <img src="menu-w.png" alt="Menu" width="24" height="24">
+      </button>
+      <div class="text-white fs-2 d-none d-lg-block fw-bold">Cineverse</div>
+    </div>
+  
+    <div class="position-absolute top-50 start-50 translate-middle d-lg-none">
+      <div class="text-white text-center fw-bold" style="font-size: 2rem;">Cineverse</div>
+    </div>
+  
 
-          <div class="d-flex gap-2">
-            <button class="favourites-btn" id="favoritebtn">Favourites</button>
-            <button class="watchlist-btn " id="watchlistbtn">Watch List</button>
-            <button class="login-btn" id="loginbtn">Log In</button>
-          </div>
+    <div class="d-flex gap-2">
+      <button class="watchlist-btn btn d-none d-lg-block" id="watchlistbtn">WatchList</button>
+      <button class="login-btn btn" id="loginbtn">
+        <img src="login-4.png" alt="Menu" width="30" height="30">
+      </button>
+    </div>
+  
 
     <div class="side-menu" id="sideMenu">
       <ul class="list-unstyled">

@@ -30,7 +30,6 @@ fetch(apiUrl)
 
 
 // side Menue
-
 const browseBtn = document.getElementById('browseBtn');
 const sideMenu = document.getElementById('sideMenu');
 
@@ -38,6 +37,9 @@ browseBtn.addEventListener('click', () => {
     sideMenu.classList.toggle('open');
 });
 
+function closeSideMenu() {
+  sideMenu.classList.remove('open');
+}
 
 function toggleSubMenu(id) {
   const submenu = document.getElementById(id);

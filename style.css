@@ -1,9 +1,4 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: Arial, sans-serif;
@@ -11,15 +6,13 @@ body {
   color: white;
 }
 
-/* Header */
+
 header {
-  position: relative;
   z-index: 2;
   height: 90px;
   background-color: #1b1b1b;
 }
 
-/* Buttons */
 .watchlist-btn,
 .login-btn,
 .browse-btn,
@@ -30,7 +23,7 @@ header {
 }
 
 .watchlist-btn {
-  background-color: #111;
+  background-color: #1b1b1b;
   border: 2px solid #ff6347;
 }
 
@@ -46,7 +39,7 @@ header {
   background-color: #e5533d;
 }
 
-/* Side menu */
+
 .side-menu {
   position: fixed;
   top: 0;
@@ -54,7 +47,7 @@ header {
   width: 250px;
   height: 100%;
   background-color: #333;
-  transition: left 0.3s ease;
+  transition: left 0.5s ease;
   padding-top: 60px;
   z-index: 2;
 }
@@ -93,19 +86,18 @@ header {
 }
 
 .submenu {
-  display: none;
+  display: None;
   margin-left: 15px;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
-/* Banner */
+
 .banner {
   position: relative;
   height: 100vh;
-  display: flex;
+  display:flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   color: white;
 }
 
@@ -122,7 +114,7 @@ header {
 }
 
 .banner-content {
-  position: relative;
+  position: absolute;
   z-index: 1;
 }
 
@@ -150,10 +142,6 @@ header {
   cursor: pointer;
 }
 
-/* Movie list */
-.movie-list {
-  padding: 50px 20px;
-}
 
 .movie-list h2 {
   font-size: 30px;
@@ -170,7 +158,7 @@ header {
 
 .movie-card img {
   width: 100%;
-  border-bottom: 2px solid #444;
+  border-bottom: 5px solid #444;
 }
 
 .movie-card h3 {
@@ -178,10 +166,10 @@ header {
   font-size: 18px;
 }
 
-/* Footer */
+
 footer {
   padding: 20px;
-  background-color: #111;
+  background-color: #1b1b1b;
   font-size: 14px;
   text-align: center;
 }

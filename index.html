@@ -34,7 +34,7 @@
       <ul class="list-unstyled">
         <li>
           <div class="back">
-            <button class="menu-btn fs-3"><img src="back.png" alt="Menu" width="35" height="35"> Back</button>
+            <button class="menu-btn fs-3"><img src="back.png" alt="Menu" width="35" height="35" onclick="closeSideMenu()"> Back</button>
           </div>
         </li>
         <li>
@@ -64,8 +64,8 @@
           </ul>
         </li>
         <li>
-          <button class="menu-btn" onclick="toggleSubMenu('trendingSub')">Trending ▾</button>
-          <ul class="submenu" id="trendingSub">
+          <button class="menu-btn" onclick="toggleSubMenu('trending')">Trending ▾</button>
+          <ul class="submenu" id="trending">
             <div class="d-flex flex-column flex-lg-row gap-2 mb-2">
               <button class="btn text-white btn-outline-danger category-btn" data-category="Horror">Today</button>
               <button class="btn text-white btn-outline-danger category-btn" data-category="War">This Week</button>
@@ -73,8 +73,8 @@
           </ul>
         </li>
         <li>
-          <button class="menu-btn" onclick="toggleSubMenu('topRatedSub')">Top Rated ▾</button>
-          <ul class="submenu" id="topRatedSub">
+          <button class="menu-btn" onclick="toggleSubMenu('topRated')">Top Rated ▾</button>
+          <ul class="submenu" id="topRated">
             <div class="d-flex flex-column flex-lg-row gap-2 mb-2">
               <button class="btn text-white btn-outline-danger category-btn" data-category="Horror">All Time</button>
               <button class="btn text-white btn-outline-danger category-btn" data-category="War">This Year</button>
@@ -87,17 +87,17 @@
 
   <section class="banner text-center text-white py-5">
     <div class="banner-content container">
-      <h1 class="display-4">Discover Your Favorite Movies</h1>
+      <h1 class="display-2">Discover Your Favorite Movies</h1>
       <p class="lead">Explore the world of movies and TV shows.</p>
       <form class="search-bar d-flex justify-content-center gap-2 mt-4">
         <input type="text" class="form-control w-50" placeholder="Search movies...">
-        <button type="submit" class="btn btn-danger">Search</button>
+        <button type="submit" class="btn text-white">Search</button>
       </form>
     </div>
   </section>
 
   <section class="movie-list container py-5 text-center text-white">
-    <h2 class="mb-4">Trending Now</h2>
+    <h2 class="mb-8">Trending Now</h2>
     <div class="movies d-flex justify-content-center gap-4 flex-wrap">
       <div class="movie-card">
         <img src="movie1.jpg" alt="Movie 1">
@@ -118,7 +118,7 @@
     </div>
   </section>
 
-  <footer class="bg-dark text-center text-white py-3">
+  <footer class="text-center text-white py-3">
     <p class="mb-0">&copy; 2025 MovieApp, All Rights Reserved</p>
   </footer>
 

@@ -1,5 +1,5 @@
 // For the home page
-const apiKey = '447bbae2e176863ed6ad30d6b10ecdd9';
+const apiKey = 'key';
 
 const apiUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`;
 

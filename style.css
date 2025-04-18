@@ -4,7 +4,6 @@ body {
   color: white;
 }
 
-
 header {
   z-index: 2;
   height: 90px;
@@ -28,15 +27,23 @@ header {
 .login-btn,
 .browse-btn {
   background-color: #ff6347;
-  border: 1px solid #ff6347;
+  border: 5px solid #ff6347;
 }
 
 .login-btn:hover,
 .browse-btn:hover,
-.watchlist-btn:hover {
-  background-color: #e5533d;
+.watchlist-btn:hover, 
+.head-btn:hover{
+  background-color: #ff3f21;
 }
 
+.head-btn{
+  background-color: #ff6347;
+  border: 5px solid #ff6347;
+  width: 120px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
 .side-menu {
   position: fixed;
@@ -132,7 +139,7 @@ header {
   border-radius: 5px;
 }
 
-.search-bar button {
+.search-btn {
   padding: 8px 12px;
   background-color: #ff6347;
   border: none;

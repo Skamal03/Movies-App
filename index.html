@@ -95,9 +95,9 @@
     <div class="banner-content container">
       <h1 class="display-2">Discover Your Favorite Movies</h1>
       <p class="lead">Explore the world of movies and TV shows.</p>
-      <form class="search-bar d-flex justify-content-center gap-2 mt-4">
-        <input type="text" class="form-control w-50" placeholder="Search movies...">
-        <button type="submit" class="search-btn btn text-white">Search</button>
+      <form class="search-bar d-flex justify-content-center gap-2 mt-4"  onsubmit="handleSearch(event)">
+        <input type="text" class="form-control w-50" id="searchInput" placeholder="Search movies...">
+        <button type="submit" class="search-btn btn text-white" id="searchBtn">Search</button>
       </form>
     </div>
   </section>

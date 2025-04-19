@@ -100,44 +100,46 @@
     </div>
   </section>
 
+  <script src="script.js"></script>
   <script>
-    const apiKey = '447bbae2e176863ed6ad30d6b10ecdd9';
+    document.addEventListener("DOMContentLoaded", function () {
+      const apiKey = 'key';
 
-    const urlquery = new URLSearchParams(window.location.search);
-    const query = urlquery.get('query');
-    document.getElementById('searchQuery').textContent = query;
+      const urlquery = new URLSearchParams(window.location.search);
+      const query = urlquery.get('query');
+      document.getElementById('searchQuery').textContent = query;
 
-    const searchUrl = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
+      const searchUrl = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
 
-    fetch(searchUrl)
-      .then(response => response.json())
-      .then(data => {
-        const resultsContainer = document.getElementById('resultsContainer');
-        if (data.results.length === 0) {
-          resultsContainer.innerHTML = '<p>No results found.</p>';
-          return;
-        }
+      fetch(searchUrl)
+        .then(response => response.json())
+        .then(data => {
+          const resultsContainer = document.getElementById('resultsContainer');
+          if (data.results.length === 0) {
+            resultsContainer.innerHTML = '<p>No results found.</p>';
+            return;
+          }
 
-        data.results.forEach(item => {
-          if (!item.poster_path) return;
+          data.results.forEach(item => {
+            if (!item.poster_path) return;
 
-          const title = item.title || item.name || "No Title";
-          const poster = `https://image.tmdb.org/t/p/w500${item.poster_path}`;
+            const title = item.title || item.name || "No Title";
+            const poster = `https://image.tmdb.org/t/p/w500${item.poster_path}`;
 
-          const card = document.createElement('div');
-          card.classList.add('movie-card');
-          card.innerHTML = `
-            <img src="${poster}" alt="${title}" style="width: 200px; border-radius: 10px;">
-            <h5 class="mt-2">${title}</h5>
-          `;
-          resultsContainer.appendChild(card);
+            const card = document.createElement('div');
+            card.classList.add('movie-card');
+            card.innerHTML = `
+              <img src="${poster}" alt="${title}" style="width: 200px; border-radius: 10px;">
+              <h5 class="mt-2">${title}</h5>
+            `;
+            resultsContainer.appendChild(card);
+          });
+        })
+        .catch(error => {
+          console.error('Search error:', error);
+          document.getElementById('resultsContainer').innerHTML = '<p>Error loading results.</p>';
         });
-      })
-      .catch(error => {
-        console.error('Search error:', error);
-        document.getElementById('resultsContainer').innerHTML = '<p>Error loading results.</p>';
-      });
-      
+    });
   </script>
 
 </body>
